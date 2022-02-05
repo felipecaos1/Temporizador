@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Cubo giratorio </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #000;
+            perspective: 1000px ;
+                        
+            perspective-origin: center center;
+        }
+        .container{
+            width: 200px;
+            height: 200px;
+            border: 1px dashed #ffffff;
+            margin: 200px auto;
+            position: relative;
+            
+            animation: run 2s linear infinite;
+                         
+        }
+        @keyframes run{
+            from{
+                transform: rotateX(360deg);
+            }
+            to{
+                transform: rotateX(0deg);
+            }
+        }
+        .container div{
+            width: 200px;
+            height: 200px;
+            background: rgba(156, 74, 74, 0.3) ;
+            border-radius: 10px;
+            position: absolute;
+            color: white;
+            font-weight: bolder;
+            text-align: center ;
+            line-height: 200px;
+        }
+        .front{
+            transform: translateZ(100px);
+                        
+        }
+        .back{
+            transform: translateZ(-100px);
+        }
+        .left{
+            /*transform: translateX(-100px ) rotateX(90deg);*/
+            transform:rotateX(90deg) translateZ(-100px);
+        }
+                 /* La posición debe basarse en el ajuste del eje Z */
+        .right{
+            /*transform: translateX(100px ) rotateX(90deg);*/
+            transform:rotateX(90deg) translateZ(100px);
+        }
+        .top{
+            /*transform: translateY(100px) rotateY(90deg);*/
+            transform:rotateY(90deg) translateZ(100px);
+        }
+        .bottom{
+            /*transform: translateY(100px) rotateY(90deg);*/
+            transform:rotateY(90deg) translateZ(-100px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="front">1</div>
+        <div class="back">2</div>
+        <div class="left">3</div>
+        <div class="right">4</div>
+        <div class="top">5</div>
+        <div class="bottom">6</div>
+    </div>
+</body>
+</html>

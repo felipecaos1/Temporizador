@@ -4,20 +4,110 @@ body{
     height: 100vh;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+
+}
+.titulo h1{
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+.temporizador{
     display: grid;
-    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    align-self: baseline;
+}
+.sub-con{
+    
+    width:100%;
+    border-radius: 10px;
+    background-image: linear-gradient(rgba(38, 42, 77, 0.6) 50%,hsl(236, 21%, 26%,0.6) 50%);
+    -webkit-box-shadow: 0px 12px 5px -3px #1E1F29; 
+    box-shadow: 0px 12px 5px -3px #1E1F29;
+    margin-bottom: 25px;
+
+}
+.content h3{
+    text-align: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(237, 18%, 59%) ;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+.rotar{
+ animation: rotar 1s linear infinite;
+ position: relative;
+ 
+}
+@keyframes rotar{
+    form{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(180deg);
+    }
+}
+.sub-con::after{
+  content: '';
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  background-color: #1f202e;
+  position: absolute;
+  top: calc(31.5%);
+  margin-left: 99px;
+  border-radius: 6px;
+  clip-path: ellipse(43% 48% at 96% 51%);
+}
+.sub-con::before{
+    content: '';
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  background-color: #1f202e;
+  position: absolute;
+  top: calc(31.5%);
+  margin-left:-1px;
+  border-radius: 5px;
+  clip-path: ellipse(43% 48% at 5% 50%);
+}
+.sub-con h2{
+    font-family: 'Kumbh Sans', sans-serif;
+    color: transparent;
+    font-size: 70px;
+    background-clip: text;
+    background-image: linear-gradient(hsl(345, 97%, 62%) 50%,hsl(345, 95%, 68%) 50%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    text-align: center;
+    margin: 0%;
+    padding: 20px 15px;
     
 }
-#content{
-    background-image:url("images/bg-stars.svg"),linear-gradient(hsl(234, 17%, 12%) 5%,hsl(235, 16%, 14%) 10%,hsl(236, 21%, 26%));
+#content-p{
+    width: 100%;
+    height: 70%;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    place-items: center;
+    background-image:url("images/bg-stars.svg"),linear-gradient(hsl(234, 17%, 12%) 10%,hsl(235, 16%, 14%) 20%,hsl(236, 21%, 26%));
+   
 }
 #footer{
+   margin-top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 30%;
     width: 100%;
     background-image: url("images/pattern-hills.svg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    background-color: hsl(236, 21%, 26%);
 }
