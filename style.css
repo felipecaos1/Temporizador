@@ -13,12 +13,15 @@ body{
     font-weight: 700;
     font-size: 18px;
     letter-spacing: 3px;
+    padding-top: 20px;
 }
 .temporizador{
+    width: 550px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 20px;
     align-self: baseline;
+    padding-top: 30px;
 }
 .sub-con{
     
@@ -102,6 +105,7 @@ body{
 #footer{
    margin-top: 0px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 30%;
@@ -110,4 +114,28 @@ body{
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-color: hsl(236, 21%, 26%);
+}
+
+#icons{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    padding:40px 0 0 0;
+}
+.icon:hover{
+    cursor: pointer;
+    filter: invert(69%) sepia(45%) saturate(6996%) hue-rotate(313deg) brightness(105%) contrast(97%);
+}
+.attribution{
+    justify-content: end;
+    margin-top: 40px;
+    margin-bottom: -40px;
+    color: hsl(237, 18%, 59%) ;
+}
+
+.attribution a{
+    color:hsl(345, 95%, 68%) ;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Kumbh Sans', sans-serif;
 }

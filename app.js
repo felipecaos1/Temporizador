@@ -69,7 +69,7 @@ function startCount(){
     if(dias==0&&horas==0&&minutos==0&&segundos==0){
         clearInterval(intervalo);
     }
-    },100)
+    },1000)
 }
 
 function formato(x){
